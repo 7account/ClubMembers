@@ -1,13 +1,12 @@
-import java.util.ArrayList;
 public class MemberInfo {
     private String name;
     private int gradYear;
-    public boolean hasGoodStanding;
+    private boolean hasGoodStanding;
     
-    public Memberinfo(String n, int g, boolean gs) {
-        name = n;
-        gradYear = g;
-        hasGoodStanding = gs;
+    public MemberInfo(String name, int gradYear, boolean hasGoodStanding) {
+        this.name = name;
+        this.gradYear = gradYear;
+        this.hasGoodStanding = hasGoodStanding;
     }
 
     public int getGradYear() {
@@ -16,5 +15,11 @@ public class MemberInfo {
 
     public boolean inGoodStanding() {
         return hasGoodStanding;
+    }
+
+    public String toString() {
+        String s =  "\nName: " + name + "\n";
+        s += "Year: " + gradYear + "\n";
+        return s += "Good Standing: " + hasGoodStanding + "\n";
     }
 }
