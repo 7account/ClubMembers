@@ -12,7 +12,20 @@ public class ClubMembers {
         return memberList;
     }
 
+    public void setMemberList(ArrayList<MemberInfo> members) {
+       memberList = members; 
+    }
+
     public ArrayList<MemberInfo> removeMembers(int year) {
-        return null;
+        ArrayList<MemberInfo> alumni = new ArrayList<MemberInfo>();
+        for (int i = 0; i < memberList.size(); i++) {
+            MemberInfo member= memberList.get(i);
+            if (member.getGradYear() <= year && member.inGoodStanding()) {
+                alumni.add(member);
+                memberList.remove(i);
+                i--;
+            }
+        }
+        return alumni;
     }    
 }
