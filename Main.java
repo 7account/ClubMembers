@@ -7,8 +7,8 @@ public class Main {
             "ELLIS, CLARENCE",
             "VON AHN, LUIS"
         };
-        // c.addMembers(members, 2025);
-        // System.out.println(c.getMemberList());
+        c.addMembers(members, 2025);
+        System.out.println(c.getMemberList());
         MemberInfo[] roster = {
             new MemberInfo("SMITH, JANE", 2019, false),
             new MemberInfo("FOX, STEVE", 2018, true),
@@ -19,6 +19,6 @@ public class Main {
         for (MemberInfo m : roster) memberList.add(m);
         c.setMemberList(memberList);
         System.out.println(c.removeMembers(2018));
-        // System.out.println(c.getMemberList());
+        System.out.println(c.getMemberList());
     }
 }
